@@ -102,13 +102,20 @@ main {
   display: block;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 576px) {
   main {
     padding: 1rem;
   }
-  .notification-row {
-    flex-direction: column;
-    align-items: flex-start;
+  #mark-all-as-read {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 376px) {
+
+  #mark-all-as-read {
+    font-size: 10px;
+    
   }
 }
