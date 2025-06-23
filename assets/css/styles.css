@@ -1,0 +1,114 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --color-primary-red: hsl(1, 90%, 64%);
+  --color-primary-blue: hsl(219, 85%, 26%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+  --color-neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --color-neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --color-neutral-grayish-blue: hsl(219, 14%, 63%);
+  --color-neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+  --color-neutral-very-dark-blue: hsl(224, 21%, 14%);
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --font-size-paragraph: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-paragraph);
+  color: var(--color-neutral-very-dark-blue);
+  background-color: var(--color-neutral-very-light-grayish-blue);
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--color-neutral-white);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Notifications */
+
+.notification-row {
+  background-color: var(--color-neutral-light-grayish-blue-1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+}
+
+.notification-row.active {
+  background-color: var(--color-neutral-white);
+}
+
+.notification-row:hover,
+.notification-row:focus-within {
+  background-color: var(--color-neutral-light-grayish-blue-2);
+  outline: none;
+}
+
+.notification-row p {
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.notification-row strong:hover,
+.notification-row .fw-semibold:hover {
+  color: var(--color-primary-blue);
+  cursor: pointer;
+}
+
+/* Red dot */
+.red-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary-red);
+  border-radius: 50%;
+}
+
+/* Hide red dot on read notifications */
+.notification-row.active .red-circle {
+  display: none;
+}
+
+/* Private message */
+.private-message {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-neutral-light-grayish-blue-2);
+  border-radius: 5px;
+  background-color: var(--color-neutral-very-light-grayish-blue);
+}
+
+.notification-row.active .private-message {
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  main {
+    padding: 1rem;
+  }
+  .notification-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

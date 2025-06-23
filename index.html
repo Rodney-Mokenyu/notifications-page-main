@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet" />
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
+</head>
+<body>
+  <main class="container my-5 p-4 rounded shadow-sm bg-white">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center">
+        <h1 class="h3 mb-0 me-3">Notifications</h1>
+        <span
+          class="badge bg-primary border border-dark d-flex align-items-center justify-content-center"
+          style="height: 28px; min-width: 28px;"
+          aria-live="polite"
+          aria-atomic="true"
+          id="unread-count"
+          >3</span
+        >
+      </div>
+      <button id="mark-all-as-read" class="btn btn-link fw-semibold text-primary" type="button">
+        Mark all as read
+      </button>
+    </header>
+
+    <!-- Notifications List -->
+    <section id="notifications-list">
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img
+          src="assets/images/avatar-mark-webber.webp"
+          alt="Mark Webber"
+          class="img-fluid rounded-circle me-3"
+          style="width: 48px; height: 48px"
+        />
+        <div>
+          <p class="mb-0">
+            <strong>Mark Webber</strong> reacted to your recent post
+            <span class="fw-semibold">My first tournament today!</span>
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">1m ago</small>
+        </div>
+      </article>
+
+      <!-- Repeat for all notifications, same structure -->
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img
+          src="assets/images/avatar-angela-gray.webp"
+          alt="Angela Gray"
+          class="img-fluid rounded-circle me-3"
+          style="width: 48px; height: 48px"
+        />
+        <div>
+          <p class="mb-0">
+            <strong>Angela Gray</strong> followed you
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">5m ago</small>
+        </div>
+      </article>
+
+
+
+      <!-- Add rest notifications similarly -->
+             <!-- Notifications List -->
+      
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson" class="img-fluid rounded-circle me-3" style="width: 48px; height: 48px;">
+        <div>
+          <p class="mb-0">
+            <strong>Jacob Thompson</strong> has joined your group
+            <span class="fw-semibold">Chess Club</span>
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">1 day ago</small>
+        </div>
+      </article>
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" class="img-fluid rounded-circle me-3" style="width: 48px; height: 48px;">
+        <div>
+          <p class="mb-0">
+            <strong>Rizky Hasanuddin</strong> sent you a private message
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">5 days ago</small>
+          <div class="private-message border rounded p-2 mt-2">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+            I'm already having lots of fun and improving my game.
+          </div>
+        </div>
+      </article>
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" class="img-fluid rounded-circle me-3" style="width: 48px; height: 48px;">
+        <div class="d-flex justify-content-between align-items-start w-100">
+          <div>
+            <p class="mb-0">
+              <strong>Kimberly Smith</strong> commented on your picture
+              <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+            </p>
+            <small class="text-muted">1 week ago</small>
+          </div>
+          <img src="assets/images/image-chess.webp" alt="chess" style="width: 50px; height: 50px;" class="rounded ms-3">
+        </div>
+      </article>
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" class="img-fluid rounded-circle me-3" style="width: 48px; height: 48px;">
+        <div>
+          <p class="mb-0">
+            <strong>Nathan Peterson</strong> reacted to your recent post
+            <span class="fw-semibold">5 end-game strategies to increase your win rate</span>
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">2 weeks ago</small>
+        </div>
+      </article>
+
+      <article class="notification-row d-flex align-items-start rounded p-3 mb-2">
+        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim" class="img-fluid rounded-circle me-3" style="width: 48px; height: 48px;">
+        <div>
+          <p class="mb-0">
+            <strong>Anna Kim</strong> left the group
+            <span class="fw-semibold">Chess Club</span>
+            <span class="red-circle ms-2 align-middle" aria-label="Unread notification"></span>
+          </p>
+          <small class="text-muted">2 weeks ago</small>
+        </div>
+      </article>
+      <!-- End Notifications List -->
+      <!-- ... -->
+    </section>
+  </main>
+
+  <footer class="container text-center mt-5 mb-3 small text-muted">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
+    Coded by <a href="#">Oracle of Omaha</a>.
+  </footer>
+
+  <script src="assets/Scripts/main.js"></script>
+</body>
+</html>
