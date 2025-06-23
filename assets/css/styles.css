@@ -44,10 +44,14 @@ main {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
+.badge {
+    background-color: var(--color-neutral-very-dark-blue);
+}
+
 /* Notifications */
 
 .notification-row {
-  background-color: var(--color-neutral-light-grayish-blue-1);
+  background-color: var(--color-neutral-very-light-grayish-blue);
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 8px;
@@ -88,14 +92,29 @@ main {
   display: none;
 }
 
+.plain-text {
+  color: var(--color-neutral-grayish-blue); 
+}
+
+.btn {
+    color: var(--color-neutral-dark-grayish-blue);
+}
 /* Private message */
 .private-message {
-  display: none;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  height: auto;
+  color: var(--color-neutral-grayish-blue);
   border: 1px solid var(--color-neutral-light-grayish-blue-2);
   border-radius: 5px;
   background-color: var(--color-neutral-very-light-grayish-blue);
+}
+
+#notifications-list {
+    margin-top: 3rem;
+    padding: 0.5rem;
+    
 }
 
 .notification-row.active .private-message {
