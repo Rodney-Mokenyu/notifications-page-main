@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet" />
 
   <!-- Your custom CSS -->
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=2" />
 
 </head>
 <body>
@@ -20,14 +20,17 @@
     <header class="d-flex justify-content-between align-items-center mb-4">
       <div class="d-flex align-items-center">
         <h1 class="h3 mb-0 me-3">Notifications</h1>
-        <span
-          class="badge bg-primary border border-dark d-flex align-items-center justify-content-center"
-          style="height: 28px; min-width: 28px;"
-          aria-live="polite"
-          aria-atomic="true"
-          id="unread-count"
-          >3</span
-        >
+        <div
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+  class="badge bg-primary border border-dark d-flex align-items-center justify-content-center"
+  style="height: 28px; min-width: 28px;"
+  id="unread-count"
+>
+  3
+</div>
+
       </div>
       <button id="mark-all-as-read" class="btn btn-link fw-semibold text-primary" type="button">
         Mark all as read
